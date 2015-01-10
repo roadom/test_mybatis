@@ -7,6 +7,8 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
+import com.roadom.model.User;
+
 public class TestDao {
 	
 	List<User> findAll(){

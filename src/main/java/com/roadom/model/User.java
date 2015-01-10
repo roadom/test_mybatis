@@ -1,11 +1,19 @@
-package com.roadom.single;
+package com.roadom.model;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable{
+	private static final long serialVersionUID = 5540221223546485743L;
+
 	private Long id;
 	private String name;
 	private Integer age;
 	
-	
+	public User(){}
+	public User(String string, int i) {
+		this.name = string;
+		this.age = i;
+	}
 	public Long getId() {
 		return id;
 	}
@@ -30,4 +38,5 @@ public class User {
 	}
 	
 	
+
 }

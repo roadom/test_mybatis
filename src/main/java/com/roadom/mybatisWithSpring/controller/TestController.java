@@ -10,8 +10,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 
+import com.roadom.model.User;
 import com.roadom.mybatisWithSpring.biz.UserBiz;
-import com.roadom.single.User;
 
 
 @Controller
@@ -27,5 +27,9 @@ public class TestController extends MultiActionController{
 		System.out.println(list);
 		
 		return result;
+	}
+	
+	public void add(HttpServletRequest request, HttpServletResponse response){
+		userBiz.add();
 	}
 }

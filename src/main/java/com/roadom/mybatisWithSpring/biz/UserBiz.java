@@ -6,8 +6,8 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
+import com.roadom.model.User;
 import com.roadom.mybatisWithSpring.dao.UserMapper;
-import com.roadom.single.User;
 
 @Service
 public class UserBiz {
@@ -17,6 +17,12 @@ public class UserBiz {
 	
 	public List<User> findAll(){
 		return userMapper.findAll();
+	}
+
+	public void add() {
+		User user = new User("Peter", 30);
+		
+		userMapper.add(user);
 	}
 
 }

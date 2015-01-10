@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Select;
 
-import com.roadom.single.User;
+import com.roadom.model.User;
 
 public interface UserDao {
 	@Select("SELECT * FROM user")
