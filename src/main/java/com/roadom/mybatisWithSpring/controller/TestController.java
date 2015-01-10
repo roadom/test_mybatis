@@ -32,4 +32,15 @@ public class TestController extends MultiActionController{
 	public void add(HttpServletRequest request, HttpServletResponse response){
 		userBiz.add();
 	}
+	
+	public void delete(HttpServletRequest request, HttpServletResponse response){
+		userBiz.delete(6L);
+	}
+	
+	public void update(HttpServletRequest request, HttpServletResponse response){
+		User user = new User("tommy", 21);
+		user.setId(6L);
+		
+		userBiz.update(user);
+	}
 }

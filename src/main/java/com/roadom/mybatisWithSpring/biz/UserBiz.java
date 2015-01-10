@@ -19,10 +19,18 @@ public class UserBiz {
 		return userMapper.findAll();
 	}
 
-	public void add() {
+	public User add() {
 		User user = new User("Peter", 30);
-		
 		userMapper.add(user);
+		return user;
+	}
+	
+	public void delete(Long id){
+		userMapper.delete(id);
+	}
+	
+	public void update(User user){
+		userMapper.udpate(user);
 	}
 
 }
