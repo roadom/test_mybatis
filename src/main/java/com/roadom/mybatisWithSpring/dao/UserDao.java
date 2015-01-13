@@ -6,9 +6,6 @@ import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Update;
-import org.mybatis.spring.annotation.MapperScan;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
 
 import com.roadom.model.User;
 
