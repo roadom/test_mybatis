@@ -7,30 +7,30 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 import com.roadom.model.User;
-import com.roadom.mybatisWithSpring.dao.UserMapper;
+import com.roadom.mybatisWithSpring.dao.UserDao;
 
 @Service
 public class UserBiz {
 	
 	@Resource
-	private UserMapper userMapper;
+	private UserDao userDao;
 	
 	public List<User> findAll(){
-		return userMapper.findAll();
+		return userDao.findAll();
 	}
 
 	public User add() {
 		User user = new User("Peter", 30);
-		userMapper.add(user);
+		userDao.add(user);
 		return user;
 	}
 	
 	public void delete(Long id){
-		userMapper.delete(id);
+		userDao.delete(id);
 	}
 	
 	public void update(User user){
-		userMapper.udpate(user);
+		userDao.udpate(user);
 	}
 
 }

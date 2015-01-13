@@ -49,3 +49,6 @@ target/m2e-wtp/web-resources/META-INF/maven/com.roadom/test_mybatis/pom.properti
 *.MF
 target/m2e-wtp/web-resources/META-INF/maven/com.roadom/test_mybatis/pom.properties
 /target/
+
+*.class
+*.class
