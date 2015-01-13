@@ -20,7 +20,7 @@ public class TestController extends MultiActionController{
 	@Resource
 	private UserBiz userBiz;
 	
-	public ModelAndView test(HttpServletRequest request, HttpServletResponse response){
+	public ModelAndView findAll(HttpServletRequest request, HttpServletResponse response){
 		ModelAndView result = new ModelAndView();
 		
 		List<User> list = userBiz.findAll();
@@ -28,6 +28,15 @@ public class TestController extends MultiActionController{
 		
 		return result;
 	}
+	
+	public ModelAndView findById(HttpServletRequest request, HttpServletResponse response, String id){
+		ModelAndView result = new ModelAndView();
+		
+		User list = userBiz.findById(request.getParameter("id"));
+		System.out.println(list);
+		
+		return result;
+	} 
 	
 	public void add(HttpServletRequest request, HttpServletResponse response){
 		userBiz.add();

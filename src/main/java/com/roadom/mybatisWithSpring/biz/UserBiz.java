@@ -33,4 +33,8 @@ public class UserBiz {
 		userDao.udpate(user);
 	}
 
+	public User findById(String id) {
+		return userDao.findById(id);
+	}
+
 }

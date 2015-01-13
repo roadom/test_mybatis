@@ -13,6 +13,8 @@ public interface UserDao {
 	
 	List<User> findAll();
 	
+	User findById(@Param("id")Object id);
+	
 	@Insert("insert into user (name, age) values (#{user.name}, #{user.age})")
 	void add(@Param("user")User user);
 	
