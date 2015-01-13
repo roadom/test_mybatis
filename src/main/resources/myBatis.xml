@@ -21,6 +21,21 @@
  	-->
 
 	<mappers>
-		<mapper resource="user-mapper.xml" />
+		<package name="com.roadom.mybatisWithSpring.dao"/>
 	</mappers>
+	
+	<!-- 这四种注册Mapper的方式就是我想在这篇文章中表达的。总结一下：
+Xml代码  收藏代码
+<mappers>  
+   通过package元素将会把指定包下面的所有Mapper接口进行注册  
+   <package name="com.tiantian.mybatis.mapperinterface"/>  
+   通过mapper元素的resource属性可以指定一个相对于类路径的Mapper.xml文件  
+   <mapper resource="com/tiantian/mybatis/mapper/UserMapper.xml"/>  
+   通过mapper元素的url属性可以指定一个通过URL请求道的Mapper.xml文件  
+   <mapper url="file:///E:/UserMapper.xml"/>  
+   通过mapper元素的class属性可以指定一个Mapper接口进行注册  
+   <mapper class="com.tiantian.mybatis.mapperinterface.UserMapper"/>   -->
+</mappers>  
+	
+	
 </configuration>

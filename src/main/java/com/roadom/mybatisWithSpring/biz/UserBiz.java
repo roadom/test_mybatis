@@ -6,6 +6,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
+import com.roadom.model.Customer;
 import com.roadom.model.User;
 import com.roadom.mybatisWithSpring.dao.UserDao;
 
@@ -14,8 +15,12 @@ public class UserBiz {
 	
 	@Resource
 	private UserDao userDao;
+	@Resource
+	private CustomerBiz customerBiz;
 	
 	public List<User> findAll(){
+		List<Customer> list = customerBiz.findAll();
+		System.out.println(list);
 		return userDao.findAll();
 	}
 
