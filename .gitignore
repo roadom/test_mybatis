@@ -42,13 +42,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-#java files
-*.class
+# java files
 *.MF
-target/m2e-wtp/web-resources/META-INF/maven/com.roadom/test_mybatis/pom.properties
-*.MF
-target/m2e-wtp/web-resources/META-INF/maven/com.roadom/test_mybatis/pom.properties
 /target/
-
-*.class
 *.class
