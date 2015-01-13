@@ -19,13 +19,18 @@
         <property name="defaultAutoCommit" value="true"></property>
     </bean>
 
+	<!-- 
+		第一种方式，通过sqlSessionFactory逐个生成Dao的bean。
+		dataSource：作为数据源，是必须的。
+		configLocation: 引入myBatis配置文件。如果不予以定义，依旧可以使用@Select等标签在Dao上直接定义sql
+		mapperLocations: 导入多个myBatis的Mapper文件。
+	 -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:myBatis.xml"></property>
 	</bean>
-
-	<bean id="userMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
-		<property name="mapperInterface" value="com.roadom.mybatisWithSpring.dao.UserMapper" />
+	<bean id="userDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.roadom.mybatisWithSpring.dao.UserDao" />
 		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
 	</bean>
-
 </beans>
