@@ -35,7 +35,7 @@
 	<bean id="userDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
 		<property name="mapperInterface" value="com.roadom.mybatisWithSpring.dao.*Dao" />
 		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
-	</bean>
+	</bean> 
 	 -->
 	
 	

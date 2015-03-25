@@ -34,8 +34,8 @@ Xml代码  收藏代码
    通过mapper元素的url属性可以指定一个通过URL请求道的Mapper.xml文件  
    <mapper url="file:///E:/UserMapper.xml"/>  
    通过mapper元素的class属性可以指定一个Mapper接口进行注册  
-   <mapper class="com.tiantian.mybatis.mapperinterface.UserMapper"/>   -->
-</mappers>  
+   <mapper class="com.tiantian.mybatis.mapperinterface.UserMapper"/>
+</mappers> -->  
 	
 	
 </configuration>
